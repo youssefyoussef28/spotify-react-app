@@ -1,7 +1,4 @@
-import React from "react";
-import { Link, NavLink, useParams } from "react-router-dom";
-
-const Cards = (props) => {
+const CardAlbum = (props) => {
   return (
     <>
       {" "}
@@ -24,12 +21,18 @@ const Cards = (props) => {
         </div>
         <div class="p-5">
           <a href="#">
-            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+            <h5 class="mb-2 text-2xl font-light tracking-tight text-gray-900 dark:text-white">
               {props.name}
             </h5>
           </a>
           <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
-            Followers: {props.followers.total}
+            {props.releaseDate}
+          </p>
+          <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+            {props.tracks} Tracks
+          </p>
+          <p class="mb-3 font-normal text-gray-700 text-center dark:text-gray-400">
+            <a href={props.link}>Preview on Spotify</a>
           </p>
         </div>
       </div>
@@ -38,4 +41,4 @@ const Cards = (props) => {
   );
 };
 
-export default Cards;
+export default CardAlbum;
