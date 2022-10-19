@@ -44,7 +44,7 @@ const Login = () => {
             >
               Login
             </a>
-            <img src={LOGO} class="h-12 ml-[-50px]" alt="Spotify Logo" />
+            <img src={LOGO} className="h-12 ml-[-50px]" alt="Spotify Logo" />
           </div>
         ) : (
           <a
