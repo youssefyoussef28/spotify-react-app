@@ -51,7 +51,7 @@ const Search = () => {
 
   return (
     <>
-      <div className="flex flex-row justify-center h-1/3 w-full border-2 p-20 border-orange-500">
+      <div className="flex flex-row justify-center h-1/3 w-full border-2 p-20 ">
         <div>
           {token ? (
             <form className="" onSubmit={searchArtists}>
