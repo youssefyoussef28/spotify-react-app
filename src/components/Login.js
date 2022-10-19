@@ -1,9 +1,9 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import LOGO from "../images/LOGO.png";
 
 const Login = () => {
   const CLIENT_ID = "d8bdc8257b2a46cbbe92d51c547c47a6";
-  const REDIRECT_URI = "http://localhost:3000";
+  const REDIRECT_URI = "http://localhost:3000/search";
   const AUTH_ENDPOINT = "https://accounts.spotify.com/authorize";
   const RESPONSE_TYPE = "token";
 

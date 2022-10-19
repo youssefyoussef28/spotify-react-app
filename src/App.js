@@ -1,8 +1,9 @@
 import "./App.css";
 import { useState, useEffect } from "react";
-import axios from "axios";
+
 import Navbar from "./components/Navbar";
 import Login from "./components/Login";
+import Search from "./components/Search";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 
 function App() {
@@ -91,6 +92,7 @@ function App() {
           <Navbar />
           <Routes>
             <Route path="/" element={<Login />} />
+            <Route path="/search" element={<Search />} />
           </Routes>
         </Router>
       </div>
