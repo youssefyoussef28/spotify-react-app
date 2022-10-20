@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, NavLink, useParams } from "react-router-dom";
 import defaultImage from "../images/default.jpg";
+import StarRatings from "react-star-ratings";
 
 const Cards = (props) => {
   return (
@@ -33,6 +34,15 @@ const Cards = (props) => {
           <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
             Followers: {props.followers.total}
           </p>
+          <div>
+            {console.log("props ", props)}
+            <StarRatings
+              rating={props.popularity / 5}
+              starDimension="20px"
+              starSpacing="2px"
+              starRatedColor="rgb(255, 255,0)'"
+            />{" "}
+          </div>
         </div>
       </div>
     </>

@@ -25,6 +25,7 @@ const Search = () => {
     });
 
     setItems(data.artists.items);
+    console.log(data.artists.items);
   };
 
   useEffect(() => {
@@ -115,6 +116,7 @@ const Search = () => {
                   images={item.images}
                   name={item.name}
                   followers={item.followers}
+                  popularity={item.popularity}
                 />
               </a>
             ))}
