@@ -8,9 +8,9 @@ const Cards = (props) => {
       {" "}
       <div
         key={props.key}
-        className="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md"
+        className="bg-white rounded-lg border border-gray-200 shadow-md max-w-xs"
       >
-        <div className="h-full ">
+        <div className="h-full">
           {props.images.length ? (
             <img
               className="rounded-t-sm  object-cover aspect-square"
