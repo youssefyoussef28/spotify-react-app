@@ -1,5 +1,6 @@
 import React from "react";
 import { Link, NavLink, useParams } from "react-router-dom";
+import defaultImage from "../images/default.jpg";
 
 const Cards = (props) => {
   return (
@@ -9,15 +10,19 @@ const Cards = (props) => {
         key={props.key}
         className="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md"
       >
-        <div className="h-full">
+        <div className="h-full ">
           {props.images.length ? (
             <img
-              className="rounded-t-sm  object-fill"
+              className="rounded-t-sm  object-cover aspect-square"
               src={props.images[0].url}
-              alt=""
+              alt="Artist Image"
             />
           ) : (
-            <div>No Image available</div>
+            <img
+              className="rounded-t-sm  object-cover aspect-square"
+              src={defaultImage}
+              alt="default Image"
+            />
           )}
         </div>
         <div className="p-5">
