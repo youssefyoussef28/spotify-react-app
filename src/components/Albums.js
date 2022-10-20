@@ -5,11 +5,12 @@ import CardAlbum from "./CardAlbum";
 
 const Albums = () => {
   let { id } = useParams();
-  const [token, setToken] = useState("");
-  const [albums, setAlbums] = useState([]);
+  const [token, setToken] = useState(localStorage.getItem("token"));
+  const [albums, setAlbums] = useState(null);
 
   //   Fetching The Albums
-  const searchAlbums = async (e) => {
+  const searchAlbums = async () => {
+    console.log(id);
     // e.preventDefault();
     const { data } = await axios.get(
       `https://api.spotify.com/v1/artists/${id}/albums`,
@@ -21,7 +22,7 @@ const Albums = () => {
     );
 
     setAlbums(data);
-    console.log(albums);
+    console.log(data);
   };
 
   useEffect(() => {
@@ -46,7 +47,7 @@ const Albums = () => {
   return (
     <>
       <div className="flex flex-wrap justify-center items-center gap-4 p-10">
-        {albums.items &&
+        {albums &&
           albums.items.map((item) => (
             <CardAlbum
               key={item.id}
@@ -54,7 +55,7 @@ const Albums = () => {
               name={item.name}
               releaseDate={item.release_date}
               tracks={item.total_tracks}
-              link={item.href}
+              link={item.external_urls.spotify}
             />
           ))}
       </div>
