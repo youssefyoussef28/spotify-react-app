@@ -103,8 +103,9 @@ const Search = () => {
           )}
         </div>
       </div>
-      <div className="mx-auto container">
-        <div className="flex flex-wrap justify-center items-center gap-4">
+      <div className="mx-auto container flex justify-center">
+        {/* flex flex-wrap justify-center items-center */}
+        <div className="flex flex-col md:flex-row md:flex-wrap  justify-center items-center   gap-4">
           {items &&
             items.map((item) => (
               <a href={`/albums/${item.id}`}>

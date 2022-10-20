@@ -46,7 +46,7 @@ const Albums = () => {
 
   return (
     <>
-      <div className="flex flex-wrap justify-center items-center gap-4 p-10">
+      <div className="flex flex-col md:flex-row md:flex-wrap  justify-center items-center   gap-4">
         {albums &&
           albums.items.map((item) => (
             <CardAlbum
